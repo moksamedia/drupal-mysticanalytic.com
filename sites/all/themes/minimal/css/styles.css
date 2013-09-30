@@ -1,0 +1,84 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* HTML element (SMACSS base) rules */
+@import "normalize.css";
+
+/* Layout rules */
+@import "layouts/responsive.css";
+
+/* Component (SMACSS module) rules */
+@import "components/misc.css";
+/* Optionally, add your own components here. */
+@import "print.css";
+
+/* SMACSS theme rules */
+/* @import "theme-A.css"; */
+/* @import "theme-B.css"; */
+
+#header {
+	/* background-color:rgb(56,61,91); */
+	border-bottom: 1px solid #669;
+	border-top: 1px solid #669;
+	margin-top:100px;
+	vertical-align:middle;
+	height:200px;
+}
+
+div.header__name-and-slogan {
+	//margin-top:80px;
+	float:none;
+	height:100%;
+
+}
+
+
+h1.header__site-name, h1.header__site-slogan {
+	font-weight:normal;
+	display:inline;
+	line-height:200px;
+	color:#669;
+}
+
+h1.header__site-slogan {
+	float:right;
+}
+
+.header__logo-image  {
+	height:150px;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.header__logo {
+	float:none;
+}
+
+html {
+	font-family: palatino, "times new roman", serif;
+}
+
+.header__site-link:link, .header__site-link:visited {
+	color:#669;
+	vertical-align:middle;
+}
+
+.header__secondary-menu {
+	position:relative;
+	top:-1.5em;
+}
+
+.header__secondary-menu a {
+	color: #669;
+	text-decoration:none;
+}
+
+#main-menu a {
+	color: #669;
+	text-decoration:none;
+}

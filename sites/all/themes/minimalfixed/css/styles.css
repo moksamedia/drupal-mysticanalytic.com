@@ -1,0 +1,119 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* HTML element (SMACSS base) rules */
+@import "normalize.css";
+
+/* Layout rules */
+@import "layouts/responsive.css";
+
+/* Component (SMACSS module) rules */
+@import "components/misc.css";
+/* Optionally, add your own components here. */
+@import "print.css";
+
+/* SMACSS theme rules */
+/* @import "theme-A.css"; */
+/* @import "theme-B.css"; */
+
+html {
+	font-family: palatino, "times new roman", serif;
+}
+
+	
+#header {
+	color:#669;
+	border-bottom: 1px solid #669;
+	border-top: 1px solid #669;
+	clear:both;
+	margin-top:50px;
+}
+
+#navigation a {
+	text-decoration: none;
+	color:#669;
+}
+
+.header__site-link:link, .header__site-link:visited {
+	color: #669;
+	text-decoration: none;
+}
+
+img.header__logo-image {
+	margin-top:25px;
+	margin-bottom:25px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+a.header__logo {
+	width:100%;
+}
+
+div.header__name-and-slogan {
+	margin-top:40px;
+}
+
+h2.node__title {
+	text-align: center;
+	line-height:1.5em;
+}
+
+p.submitted {
+	text-align: center;
+	margin-top:0px;
+	font-size:80%;
+	font-style:italic;
+}
+
+h2.node__title a {
+	text-decoration: none;
+	color:#333;;
+}
+
+article.node-blogentry {
+	margin-top:150px;
+	max-width:500px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+ul.inline li a {
+	text-decoration: none;
+	color:#669;
+}
+
+ul.inline {
+	opacity:0.5;
+	font-family:Verdana;
+	width:100%;
+}
+
+div.links-div {
+	text-align:center;
+	margin-top:50px;
+}
+
+.inline li.last {
+	padding:0;
+}
+
+@media only screen and (max-device-width: 600px), screen and (max-width: 600px) {
+	#header {
+		margin-top:10px;
+	}
+	
+	div.links-div {
+		margin-top:10px;
+	}
+	
+	article.node-blogentry {
+		margin-top:80px;
+	}
+}
